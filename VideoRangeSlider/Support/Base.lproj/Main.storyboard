@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zb2-55-iiN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="wls-1k-Dtd">
+            <objects>
+                <viewController storyboardIdentifier="ShowViewController" id="Zb2-55-iiN" customClass="ViewController" customModule="VideoRangeSlider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="phe-Lz-Yf1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qwy-kL-f6s">
+                                <rect key="frame" x="20" y="80" width="374" height="631"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tdl-OG-3Yt" customClass="VideoRangeSlider" customModule="VideoRangeSlider" customModuleProvider="target">
+                                <rect key="frame" x="20" y="719" width="374" height="52"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpC-Kg-Nnz">
+                                <rect key="frame" x="179.5" y="779" width="55" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" image="play.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="37" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <action selector="playVideoTapped:" destination="Zb2-55-iiN" eventType="touchUpInside" id="Nd1-OJ-wKn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCw-g6-JFn">
+                                <rect key="frame" x="242.5" y="784" width="17.5" height="44"/>
+                                <state key="normal" title="">
+                                    <imageReference key="image" image="pause.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="19" scale="large" weight="thin"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseVideoTapped:" destination="Zb2-55-iiN" eventType="touchUpInside" id="K2G-8K-AgL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ogD-kl-JbN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qwy-kL-f6s" firstAttribute="top" secondItem="ogD-kl-JbN" secondAttribute="top" constant="36" id="C2N-zO-q1F"/>
+                            <constraint firstItem="Qwy-kL-f6s" firstAttribute="trailing" secondItem="Tdl-OG-3Yt" secondAttribute="trailing" id="COv-eP-FBY"/>
+                            <constraint firstItem="ogD-kl-JbN" firstAttribute="trailing" secondItem="Qwy-kL-f6s" secondAttribute="trailing" constant="20" id="EUJ-WQ-W2X"/>
+                            <constraint firstItem="Tdl-OG-3Yt" firstAttribute="top" secondItem="Qwy-kL-f6s" secondAttribute="bottom" constant="8" symbolic="YES" id="FB7-KV-OZl"/>
+                            <constraint firstItem="Qwy-kL-f6s" firstAttribute="leading" secondItem="Tdl-OG-3Yt" secondAttribute="leading" id="KQQ-fp-gb7"/>
+                            <constraint firstItem="Qwy-kL-f6s" firstAttribute="centerX" secondItem="wpC-Kg-Nnz" secondAttribute="centerX" id="MpW-hj-wf9"/>
+                            <constraint firstItem="Qwy-kL-f6s" firstAttribute="leading" secondItem="ogD-kl-JbN" secondAttribute="leading" constant="20" id="N11-hd-JlW"/>
+                            <constraint firstItem="cCw-g6-JFn" firstAttribute="leading" secondItem="wpC-Kg-Nnz" secondAttribute="trailing" constant="8" symbolic="YES" id="WSu-UP-1Ub"/>
+                            <constraint firstAttribute="bottom" secondItem="Qwy-kL-f6s" secondAttribute="bottom" constant="185" id="Xrx-8F-qZf"/>
+                            <constraint firstItem="wpC-Kg-Nnz" firstAttribute="centerY" secondItem="cCw-g6-JFn" secondAttribute="centerY" id="api-Y4-F7f"/>
+                            <constraint firstItem="ogD-kl-JbN" firstAttribute="bottom" secondItem="wpC-Kg-Nnz" secondAttribute="bottom" constant="29" id="bPz-gI-dlK"/>
+                            <constraint firstItem="wpC-Kg-Nnz" firstAttribute="top" secondItem="Tdl-OG-3Yt" secondAttribute="bottom" constant="8" symbolic="YES" id="cba-g2-tHX"/>
+                            <constraint firstItem="cCw-g6-JFn" firstAttribute="top" secondItem="Tdl-OG-3Yt" secondAttribute="bottom" constant="13" id="pQ8-Bq-sqf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="cCw-g6-JFn" id="U5x-lc-NhM"/>
+                        <outlet property="playButton" destination="wpC-Kg-Nnz" id="7K2-eu-nYw"/>
+                        <outlet property="rangeSliderView" destination="Tdl-OG-3Yt" id="L2B-UQ-Qba"/>
+                        <outlet property="videoViewConteiner" destination="Qwy-kL-f6s" id="JDT-3D-7Lk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LUM-Ow-ZKx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="-249.10714285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
+        <image name="play.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

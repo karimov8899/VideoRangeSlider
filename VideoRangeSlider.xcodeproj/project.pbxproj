@@ -13,6 +13,11 @@
 		550B9E522636A52B00CA8613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550B9E502636A52B00CA8613 /* Main.storyboard */; };
 		550B9E542636A52D00CA8613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550B9E532636A52D00CA8613 /* Assets.xcassets */; };
 		550B9E572636A52D00CA8613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550B9E552636A52D00CA8613 /* LaunchScreen.storyboard */; };
+		550B9E662636A6F500CA8613 /* video.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 550B9E652636A6F500CA8613 /* video.MP4 */; };
+		550B9EAA2636BAB800CA8613 /* VideoRangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550B9EA92636BAB800CA8613 /* VideoRangeSlider.swift */; };
+		550B9EB22636BB3700CA8613 /* VideoThumbnailsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550B9EB12636BB3700CA8613 /* VideoThumbnailsManager.swift */; };
+		550B9EB52636BB6800CA8613 /* ABVideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550B9EB42636BB6800CA8613 /* ABVideoHelper.swift */; };
+		550B9EB82636BB7D00CA8613 /* ABProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550B9EB72636BB7D00CA8613 /* ABProgressIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		550B9E532636A52D00CA8613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		550B9E562636A52D00CA8613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		550B9E582636A52D00CA8613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		550B9E652636A6F500CA8613 /* video.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.MP4; sourceTree = "<group>"; };
+		550B9EA92636BAB800CA8613 /* VideoRangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRangeSlider.swift; sourceTree = "<group>"; };
+		550B9EB12636BB3700CA8613 /* VideoThumbnailsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoThumbnailsManager.swift; sourceTree = "<group>"; };
+		550B9EB42636BB6800CA8613 /* ABVideoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABVideoHelper.swift; sourceTree = "<group>"; };
+		550B9EB72636BB7D00CA8613 /* ABProgressIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABProgressIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,36 @@
 		550B9E492636A52B00CA8613 /* VideoRangeSlider */ = {
 			isa = PBXGroup;
 			children = (
-				550B9E4A2636A52B00CA8613 /* AppDelegate.swift */,
-				550B9E4C2636A52B00CA8613 /* SceneDelegate.swift */,
 				550B9E4E2636A52B00CA8613 /* ViewController.swift */,
-				550B9E502636A52B00CA8613 /* Main.storyboard */,
-				550B9E532636A52D00CA8613 /* Assets.xcassets */,
-				550B9E552636A52D00CA8613 /* LaunchScreen.storyboard */,
+				550B9EC92636BD3700CA8613 /* ABVideoRange */,
+				550B9E632636A62D00CA8613 /* Support */,
 				550B9E582636A52D00CA8613 /* Info.plist */,
 			);
 			path = VideoRangeSlider;
+			sourceTree = "<group>";
+		};
+		550B9E632636A62D00CA8613 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				550B9E502636A52B00CA8613 /* Main.storyboard */,
+				550B9E4A2636A52B00CA8613 /* AppDelegate.swift */,
+				550B9E4C2636A52B00CA8613 /* SceneDelegate.swift */,
+				550B9E532636A52D00CA8613 /* Assets.xcassets */,
+				550B9E552636A52D00CA8613 /* LaunchScreen.storyboard */,
+				550B9E652636A6F500CA8613 /* video.MP4 */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		550B9EC92636BD3700CA8613 /* ABVideoRange */ = {
+			isa = PBXGroup;
+			children = (
+				550B9EB72636BB7D00CA8613 /* ABProgressIndicator.swift */,
+				550B9EB42636BB6800CA8613 /* ABVideoHelper.swift */,
+				550B9EA92636BAB800CA8613 /* VideoRangeSlider.swift */,
+				550B9EB12636BB3700CA8613 /* VideoThumbnailsManager.swift */,
+			);
+			path = ABVideoRange;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +158,7 @@
 				550B9E572636A52D00CA8613 /* LaunchScreen.storyboard in Resources */,
 				550B9E542636A52D00CA8613 /* Assets.xcassets in Resources */,
 				550B9E522636A52B00CA8613 /* Main.storyboard in Resources */,
+				550B9E662636A6F500CA8613 /* video.MP4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550B9EAA2636BAB800CA8613 /* VideoRangeSlider.swift in Sources */,
 				550B9E4F2636A52B00CA8613 /* ViewController.swift in Sources */,
 				550B9E4B2636A52B00CA8613 /* AppDelegate.swift in Sources */,
 				550B9E4D2636A52B00CA8613 /* SceneDelegate.swift in Sources */,
+				550B9EB52636BB6800CA8613 /* ABVideoHelper.swift in Sources */,
+				550B9EB82636BB7D00CA8613 /* ABProgressIndicator.swift in Sources */,
+				550B9EB22636BB3700CA8613 /* VideoThumbnailsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pressure.VideoRangeSlider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +351,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pressure.VideoRangeSlider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
